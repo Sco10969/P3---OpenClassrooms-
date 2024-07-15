@@ -180,6 +180,18 @@ a {
                         line-height: var(--line-height-19);
                     }
                 }
+
+                .badge {
+                    position: absolute;
+                    right: 140px;
+                    padding: 5px 10px; // Ajustez selon vos besoins
+                    border-radius: 5px; // Ajustez selon vos besoins
+    
+                    img {
+                        width: 80px;
+                        height: 29px; // Ajustez selon vos besoins
+                    }
+                }
             }
         }
     }

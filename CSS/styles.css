@@ -158,6 +158,16 @@ a {
   font-weight: var(--font-weight-300);
   line-height: var(--line-height-19);
 }
+.restaurants .restaurants-cards .card-container .card .badge {
+  position: absolute;
+  right: 140px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.restaurants .restaurants-cards .card-container .card .badge img {
+  width: 80px;
+  height: 29px;
+}
 
 /* Styles du footer */
 .footer {
