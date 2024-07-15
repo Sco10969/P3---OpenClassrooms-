@@ -1,4 +1,6 @@
 /* styles.scss */
+/* Importation de la police Roboto depuis Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -35,6 +37,12 @@ body {
   min-height: 100vh;
 }
 
+/* General styles for links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Main container with maximum width and spacing */
 .main-container {
   width: 100%;
@@ -45,21 +53,30 @@ body {
 
 /* Styles du header */
 .header-container {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 100%;
+  position: relative;
 }
 .header-container .header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .header-container .header-content .header-icon-goback {
   display: none;
 }
 .header-container .header-content .header-logo {
   background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: relative;
+  width: 100%;
+}
+.header-container .header-content .header-logo .logo {
+  width: 197px;
+  height: 36px;
 }
 .header-container .header-content .header-location {
   display: flex;
@@ -68,62 +85,77 @@ body {
   padding: 10px;
   width: 100%;
   justify-content: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
 }
 .header-container .header-content .header-location .header-location-icon {
   margin-right: 10px;
 }
-.header-container .header-content .header-location .header-location-icon img {
-  width: 100%;
-  height: 100%;
+.header-container .header-content .header-location .header-location-icon .icon-filter {
+  width: 12px;
+  height: 16px;
 }
 .header-container .header-content .header-location .header-location-text {
-  font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  color: var(--dark-blue);
+  color: #353535;
   margin: 0;
 }
 
-/* Styles des cartes de restaurants */
-.restaurants-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
+/* Styles de la section des restaurants */
+.restaurants {
+  flex: 1;
   background-color: var(--light);
 }
-.restaurants-cards .card-container {
-  text-decoration: none;
-  color: inherit;
-  width: 100%;
-  max-width: 346px;
+.restaurants .restaurants-title {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 80px;
+  padding-bottom: 20px;
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-32);
+  color: #000000;
+  text-align: left;
 }
-.restaurants-cards .card-container .card {
+.restaurants .restaurants-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 18px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 17px 0 18px;
+}
+.restaurants .restaurants-cards .card-container .card {
+  display: flex;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  flex-direction: column;
+  height: 251px;
 }
-.restaurants-cards .card-container .card .card-img {
-  width: 100%;
-  height: 231px;
+.restaurants .restaurants-cards .card-container .card img {
   object-fit: cover;
-  display: block;
+  height: 172px;
 }
-.restaurants-cards .card-container .card .card-content {
+.restaurants .restaurants-cards .card-container .card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  color: black;
   padding: 15px;
 }
-.restaurants-cards .card-container .card .card-content .card-title {
+.restaurants .restaurants-cards .card-container .card .card-content .card-title {
   font-size: var(--font-size-24);
   font-weight: var(--font-weight-700);
   line-height: var(--line-height-21);
 }
-.restaurants-cards .card-container .card .card-content .card-subtitle {
+.restaurants .restaurants-cards .card-container .card .card-content .card-subtitle {
   font-size: var(--font-size-17);
-  font-weight: var(--font-weigt-300);
+  font-weight: var(--font-weight-300);
   line-height: var(--line-height-19);
 }
 

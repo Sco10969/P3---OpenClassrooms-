@@ -1,4 +1,8 @@
 /* styles.scss */
+/* Importation de la police Roboto depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -38,6 +42,12 @@ body {
     min-height: 100vh; // Assurez-vous que le corps prend toute la hauteur de la fenêtre
 }
 
+/* General styles for links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* Main container with maximum width and spacing */
 .main-container {
     width: 100%;
@@ -49,15 +59,16 @@ body {
 
 /* Styles du header */
 .header-container {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100%;
+    position: relative;
 
     .header-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: relative;
 
         .header-icon-goback {
             display: none; // Masquer l'icône de retour pour l'instant
@@ -65,6 +76,15 @@ body {
 
         .header-logo {
             background-color: #FFFFFF;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            position: relative;
+            width: 100%;
+
+            .logo {
+                width: 197px;
+                height: 36px;
+            }
         }
 
         .header-location {
@@ -74,70 +94,91 @@ body {
             padding: 10px;
             width: 100%;
             justify-content: center;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1; // Assurez-vous que l'ombre est au-dessus des autres contenus
+            position: relative; // Ajouté pour permettre l'utilisation de z-index
 
             .header-location-icon {
                 margin-right: 10px;
 
-                img {
-                    width: 100%;
-                    height: 100%;
+                .icon-filter {
+                    width: 12px;
+                    height: 16px;
                 }
             }
 
             .header-location-text {
-                font-family: 'Raleway', sans-serif;
                 font-weight: 500;
                 font-size: 1rem;
-                color: var(--dark-blue);
+                color: #353535;
                 margin: 0;
             }
         }
     }
 }
 
-/* Styles des cartes de restaurants */
-.restaurants-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+/* Styles de la section des restaurants */
+.restaurants {
+    flex: 1;
     background-color: var(--light);
 
-    .card-container {
-        text-decoration: none;
-        color: inherit;
+
+    .restaurants-title {
+        padding-top:  20px;
+        padding-left: 20px;
+        padding-right: 80px;
+        padding-bottom: 20px;
+        font-weight: var(--font-weight-700);
+        font-size: var(--font-size-32);
+        color: #000000;
+        text-align: left;
+
+    }
+
+    .restaurants-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 18px;
+        justify-content: space-between;
         width: 100%;
-        max-width: 346px; // Ajuster la largeur maximale pour correspondre à la largeur de l'image
+        padding: 0 17px 0 18px;
+        .card-container {
+            // flex: 1;
 
-        .card {
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            .card {
+                display: flex;
+                background-color: #fff;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s, box-shadow 0.3s;
+                flex-direction: column;
+                height: 251px;
 
-            .card-img {
-                width: 100%; // Assurez-vous que l'image prend toute la largeur du conteneur
-                height: 231px; // Hauteur fixe pour les images
-                object-fit: cover;
-                display: block;
-            }
-
-            .card-content {
-                padding: 15px;
-
-                .card-title {
-                    font-size: var(--font-size-24);
-                    font-weight: var(--font-weight-700);
-                    line-height: var(--line-height-21);
+                img {
+                    object-fit: cover;
+                    height: 172px;
                 }
 
-                .card-subtitle {
-                    font-size: var(--font-size-17);
-                    font-weight: var(--font-weigt-300);
-                    line-height: var(--line-height-19);
+                .card-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 8px;
+                    color: black;
+                    padding: 15px;
+
+                    .card-title {
+                        font-size: var(--font-size-24);
+                        font-weight: var(--font-weight-700);
+                        line-height: var(--line-height-21);
+                    }
+
+                    .card-subtitle {
+                        font-size: var(--font-size-17);
+                        font-weight: var(--font-weight-300);
+                        line-height: var(--line-height-19);
+                    }
                 }
             }
         }
