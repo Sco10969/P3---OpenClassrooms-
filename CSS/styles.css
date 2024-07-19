@@ -177,18 +177,16 @@ a {
   background-color: #353535;
   color: #fff;
   padding: 20px;
-  text-align: center;
+  text-align: left;
 }
 .footer .footer-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.footer .footer-container .footer-logo {
-  margin-bottom: 20px;
+  align-items: flex-start;
+  gap: 16px;
 }
 .footer .footer-container .footer-logo img {
-  width: 150px;
+  width: 139px;
   filter: brightness(0) invert(1);
 }
 .footer .footer-container .footer-links {
@@ -196,12 +194,17 @@ a {
   padding: 0;
 }
 .footer .footer-container .footer-links li {
-  margin: 10px 0;
+  margin-bottom: 7px;
+}
+.footer .footer-container .footer-links li:nth-child(1) a, .footer .footer-container .footer-links li:nth-child(2) a {
+  font-weight: var(--font-weight-500);
+}
+.footer .footer-container .footer-links li:nth-child(3) a, .footer .footer-container .footer-links li:nth-child(4) a {
+  font-weight: var(--font-weight-400);
 }
 .footer .footer-container .footer-links li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
 }
 .footer .footer-container .footer-links li a:hover {
   text-decoration: underline;

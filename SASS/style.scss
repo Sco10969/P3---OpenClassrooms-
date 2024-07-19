@@ -125,7 +125,7 @@ a {
 
 
     .restaurants-title {
-        padding-top:  20px;
+        padding-top: 20px;
         padding-left: 20px;
         padding-right: 80px;
         padding-bottom: 20px;
@@ -143,6 +143,7 @@ a {
         justify-content: space-between;
         width: 100%;
         padding: 0 17px 0 18px;
+
         .card-container {
             // flex: 1;
 
@@ -189,6 +190,7 @@ a {
                     right: 10px; // Ajustez cette valeur selon vos besoins
                     padding: 5px 10px;
                     border-radius: 5px;
+
                     img {
                         width: 80px;
                         height: 29px;
@@ -204,18 +206,17 @@ a {
     background-color: #353535;
     color: #fff;
     padding: 20px;
-    text-align: center;
+    text-align: left;
 
     .footer-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        gap: 16px;
 
         .footer-logo {
-            margin-bottom: 20px;
-
             img {
-                width: 150px;
+                width: 139px;
                 filter: brightness(0) invert(1); // Appliquer un filtre pour rendre l'image blanche
             }
         }
@@ -225,12 +226,25 @@ a {
             padding: 0;
 
             li {
-                margin: 10px 0;
+                margin-bottom: 7px;
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    a {
+                        font-weight: var(--font-weight-500);
+                    }
+                }
+
+                &:nth-child(3),
+                &:nth-child(4) {
+                    a {
+                        font-weight: var(--font-weight-400);
+                    }
+                }
 
                 a {
                     color: #fff;
                     text-decoration: none;
-                    font-weight: 500;
 
                     &:hover {
                         text-decoration: underline;
