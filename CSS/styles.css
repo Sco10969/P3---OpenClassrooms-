@@ -16,6 +16,7 @@
   --light-blue: #89C8FA;
   --dark-blue: #003A68;
   --blue-magenta: #9356DC;
+  /* Typography */
   --font-weight-700: 700;
   --font-weight-500: 500;
   --font-weight-400: 400;
@@ -135,6 +136,7 @@ a {
   transition: transform 0.3s, box-shadow 0.3s;
   flex-direction: column;
   height: 251px;
+  position: relative;
 }
 .restaurants .restaurants-cards .card-container .card img {
   object-fit: cover;
@@ -160,7 +162,8 @@ a {
 }
 .restaurants .restaurants-cards .card-container .card .badge {
   position: absolute;
-  right: 140px;
+  top: 10px;
+  right: 10px;
   padding: 5px 10px;
   border-radius: 5px;
 }

@@ -20,6 +20,7 @@
     --dark-blue: #003A68; // Dark Blue
     --blue-magenta: #9356DC; // Blue Magenta
 
+    /* Typography */
     --font-weight-700: 700;
     --font-weight-500: 500;
     --font-weight-400: 400;
@@ -39,7 +40,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; // Assurez-vous que le corps prend toute la hauteur de la fenêtre
+    min-height: 100vh;
 }
 
 /* General styles for links */
@@ -154,6 +155,7 @@ a {
                 transition: transform 0.3s, box-shadow 0.3s;
                 flex-direction: column;
                 height: 251px;
+                position: relative; // Ajouté pour permettre le positionnement absolu du badge
 
                 img {
                     object-fit: cover;
@@ -183,13 +185,13 @@ a {
 
                 .badge {
                     position: absolute;
-                    right: 140px;
-                    padding: 5px 10px; // Ajustez selon vos besoins
-                    border-radius: 5px; // Ajustez selon vos besoins
-    
+                    top: 10px; // Ajustez cette valeur selon vos besoins
+                    right: 10px; // Ajustez cette valeur selon vos besoins
+                    padding: 5px 10px;
+                    border-radius: 5px;
                     img {
                         width: 80px;
-                        height: 29px; // Ajustez selon vos besoins
+                        height: 29px;
                     }
                 }
             }
