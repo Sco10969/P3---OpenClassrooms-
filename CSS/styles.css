@@ -206,6 +206,9 @@ a {
   color: #fff;
   text-decoration: none;
 }
+.footer .footer-container .footer-links li a img {
+  margin-right: 4px;
+}
 .footer .footer-container .footer-links li a:hover {
   text-decoration: underline;
 }
