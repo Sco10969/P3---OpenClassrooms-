@@ -11,29 +11,35 @@
 }
 
 
-:root {
-    /* Colors */
-    --light: #F3F3F3; // Light
-    --green-light: #99E2D0; // Light Green
-    --green: #008766; // Green
-    --light-blue: #89C8FA; // Light Blue
-    --dark-blue: #003A68; // Dark Blue
-    --blue-magenta: #9356DC; // Blue Magenta
 
-    /* Typography */
-    --font-weight-700: 700;
-    --font-weight-500: 500;
-    --font-weight-400: 400;
-    --font-weight-300: 300;
-    --font-size-16: 1rem;
-    --font-size-18: 1.125rem;
-    --font-size-20: 1.25rem;
-    --font-size-24: 1.5rem;
-    --font-size-32: 2rem;
-    --line-height-28: 1.75rem;
-    --line-height-21: 1.315rem;
-    --line-height-19: 1.245rem;
-}
+/* Colors */
+$primary: #FFFFFF;
+$secondary: #F6F6F6;
+
+$light: #F3F3F3; // Light
+$green-light: #99E2D0; // Light Green
+$green: #008766; // Green
+$light-blue: #89C8FA; // Light Blue
+$dark-blue: #003A68; // Dark Blue
+$blue-magenta: #9356DC; // Blue Magenta
+$gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+$hover-gradient: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+
+/* Typography */
+$font-weight-700: 700;
+$font-weight-500: 500;
+$font-weight-400: 400;
+$font-weight-300: 300;
+$font-size-16: 1rem;
+$font-size-18: 1.125rem;
+$font-size-20: 1.25rem;
+$font-size-24: 1.5rem;
+$font-size-32: 2rem;
+$line-height-28: 1.75rem;
+$line-height-21: 1.315rem;
+$line-height-19: 1.245rem;
+
 
 /* Centering the page content */
 body {
@@ -49,6 +55,15 @@ a {
     text-decoration: none;
 }
 
+/* Shadow effect for elements */
+.shadow {
+    box-shadow: 0px 4px 15px 0px #00000026;
+
+    .shadow-card {
+        box-shadow: 0px 4px 15px 0px #0000001A;
+    }
+}
+
 /* Main container with maximum width and spacing */
 .main-container {
     width: 100%;
@@ -62,24 +77,24 @@ a {
 .header-container {
     text-align: center;
     width: 100%;
-    position: relative;
+
 
     .header-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        position: relative;
+
 
         .header-icon-goback {
             display: none; // Masquer l'icône de retour pour l'instant
         }
 
         .header-logo {
-            background-color: #FFFFFF;
+            background-color: $primary;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 2;
-            position: relative;
+            z-index: 1;
+
             width: 100%;
 
             .logo {
@@ -96,8 +111,7 @@ a {
             width: 100%;
             justify-content: center;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-            position: relative;
+
 
             .header-location-icon {
                 margin-right: 10px;
@@ -118,22 +132,127 @@ a {
     }
 }
 
+/* Styles de la section réservation */
+.reservation {
+    padding: 20px;
+    background-color: $secondary;
+    text-align: center;
+
+    .reservation-title {
+        font-weight: $font-weight-700;
+        font-size: $font-size-24;
+        line-height: $line-height-28;
+        margin-bottom: 10px;
+    }
+
+    .reservation-subtitle {
+        font-weight: $font-weight-300;
+        font-size: $font-size-18;
+        line-height: $line-height-21;
+        color: #353535;
+        margin-bottom: 20px;
+    }
+
+    .reservation-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background: $gradient;
+        color: $primary;
+        font-weight: $font-weight-500;
+        font-size: $font-size-16;
+        line-height: $line-height-19;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background: $hover-gradient;
+        }
+    }
+}
+
+/* Styles de la section fonctionnement */
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    height: 440px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    justify-content: center;
+
+    .fonctionnement-header {
+        margin-bottom: 20px;
+
+        .fonctionnement-title {
+            font-weight: $font-weight-700;
+            font-size: $font-size-32;
+            line-height: $line-height-28;
+            color: #000000;
+        }
+    }
+
+    .fonctionnement-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .fonctionnement-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: $secondary;
+            border-radius: 20px;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+
+            &:hover .fonctionnement-icon {
+                color: $blue-magenta;
+            }
+
+            .fonctionnement-number {
+                line-height: $line-height-28;
+                color: $primary;
+                background-color: $blue-magenta;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .fonctionnement-icon {
+                font-size: $font-size-20;
+                color: #7E7E7E;
+                transition: color 0.3s ease;
+            }
+
+            span {
+                font-weight: $font-weight-500;
+                font-size: $font-size-16;
+                line-height: $line-height-19;
+            }
+        }
+    }
+}
+
 /* Styles de la section des restaurants */
 .restaurants {
     flex: 1;
-    background-color: var(--light);
-
+    background-color: $secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .restaurants-title {
         padding-top: 20px;
         padding-left: 20px;
         padding-right: 80px;
         padding-bottom: 20px;
-        font-weight: var(--font-weight-700);
-        font-size: var(--font-size-24);
-        line-height: var(--line-height-28);
+        font-weight: $font-weight-700;
+        font-size: $font-size-24;
+        line-height: $line-height-28;
         color: #000000;
-        text-align: left;
 
     }
 
@@ -141,16 +260,17 @@ a {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
         gap: 18px;
-        justify-content: space-between;
+        justify-content: center; // Modification pour centrer les cartes
         width: 100%;
         padding: 0 17px 0 18px;
+        margin-bottom: 66px;
 
         .card-container {
             // flex: 1;
 
             .card {
                 display: flex;
-                background-color: #fff;
+                background-color: $primary;
                 border-radius: 15px;
                 overflow: hidden;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -173,15 +293,15 @@ a {
                     padding: 15px;
 
                     .card-title {
-                        font-size: var(--font-size-16);
-                        font-weight: var(--font-weight-700);
-                        line-height: var(--line-height-21);
+                        font-size: $font-size-16;
+                        font-weight: $font-weight-700;
+                        line-height: $line-height-21;
                     }
 
                     .card-subtitle {
-                        font-size: var(--font-size-17);
-                        font-weight: var(--font-weight-300);
-                        line-height: var(--line-height-19);
+                        font-size: $font-size-18;
+                        font-weight: $font-weight-300;
+                        line-height: $line-height-19;
                     }
                 }
 
@@ -232,14 +352,14 @@ a {
                 &:nth-child(1),
                 &:nth-child(2) {
                     a {
-                        font-weight: var(--font-weight-500);
+                        font-weight: $font-weight-500;
                     }
                 }
 
                 &:nth-child(3),
                 &:nth-child(4) {
                     a {
-                        font-weight: var(--font-weight-400);
+                        font-weight: $font-weight-400;
                     }
                 }
 

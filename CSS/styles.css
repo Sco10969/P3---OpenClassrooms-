@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* styles.scss */
 /* Importation de la police Roboto depuis Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
@@ -8,29 +9,8 @@
   padding: 0;
 }
 
-:root {
-  /* Colors */
-  --light: #F3F3F3;
-  --green-light: #99E2D0;
-  --green: #008766;
-  --light-blue: #89C8FA;
-  --dark-blue: #003A68;
-  --blue-magenta: #9356DC;
-  /* Typography */
-  --font-weight-700: 700;
-  --font-weight-500: 500;
-  --font-weight-400: 400;
-  --font-weight-300: 300;
-  --font-size-16: 1rem;
-  --font-size-18: 1.125rem;
-  --font-size-20: 1.25rem;
-  --font-size-24: 1.5rem;
-  --font-size-32: 2rem;
-  --line-height-28: 1.75rem;
-  --line-height-21: 1.315rem;
-  --line-height-19: 1.245rem;
-}
-
+/* Colors */
+/* Typography */
 /* Centering the page content */
 body {
   display: flex;
@@ -45,6 +25,14 @@ a {
   text-decoration: none;
 }
 
+/* Shadow effect for elements */
+.shadow {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.shadow .shadow-card {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
 /* Main container with maximum width and spacing */
 .main-container {
   width: 100%;
@@ -57,14 +45,12 @@ a {
 .header-container {
   text-align: center;
   width: 100%;
-  position: relative;
 }
 .header-container .header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 .header-container .header-content .header-icon-goback {
   display: none;
@@ -72,8 +58,7 @@ a {
 .header-container .header-content .header-logo {
   background-color: #FFFFFF;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-  position: relative;
+  z-index: 1;
   width: 100%;
 }
 .header-container .header-content .header-logo .logo {
@@ -88,8 +73,6 @@ a {
   width: 100%;
   justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  position: relative;
 }
 .header-container .header-content .header-location .header-location-icon {
   margin-right: 10px;
@@ -105,33 +88,128 @@ a {
   margin: 0;
 }
 
+/* Styles de la section réservation */
+.reservation {
+  padding: 20px;
+  background-color: #F6F6F6;
+  text-align: center;
+}
+.reservation .reservation-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 10px;
+}
+.reservation .reservation-subtitle {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.315rem;
+  color: #353535;
+  margin-bottom: 20px;
+}
+.reservation .reservation-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.245rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.reservation .reservation-button:hover {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+}
+
+/* Styles de la section fonctionnement */
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  justify-content: center;
+}
+.fonctionnement .fonctionnement-header {
+  margin-bottom: 20px;
+}
+.fonctionnement .fonctionnement-header .fonctionnement-title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.75rem;
+  color: #000000;
+}
+.fonctionnement .fonctionnement-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.fonctionnement .fonctionnement-content .fonctionnement-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+.fonctionnement .fonctionnement-content .fonctionnement-step:hover .fonctionnement-icon {
+  color: #9356DC;
+}
+.fonctionnement .fonctionnement-content .fonctionnement-step .fonctionnement-number {
+  line-height: 1.75rem;
+  color: #FFFFFF;
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement .fonctionnement-content .fonctionnement-step .fonctionnement-icon {
+  font-size: 1.25rem;
+  color: #7E7E7E;
+  transition: color 0.3s ease;
+}
+.fonctionnement .fonctionnement-content .fonctionnement-step span {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.245rem;
+}
+
 /* Styles de la section des restaurants */
 .restaurants {
   flex: 1;
-  background-color: var(--light);
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .restaurants .restaurants-title {
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 80px;
   padding-bottom: 20px;
-  font-weight: var(--font-weight-700);
-  font-size: var(--font-size-24);
-  line-height: var(--line-height-28);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
   color: #000000;
-  text-align: left;
 }
 .restaurants .restaurants-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 18px;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   padding: 0 17px 0 18px;
+  margin-bottom: 66px;
 }
 .restaurants .restaurants-cards .card-container .card {
   display: flex;
-  background-color: #fff;
+  background-color: #FFFFFF;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -153,14 +231,14 @@ a {
   padding: 15px;
 }
 .restaurants .restaurants-cards .card-container .card .card-content .card-title {
-  font-size: var(--font-size-16);
-  font-weight: var(--font-weight-700);
-  line-height: var(--line-height-21);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.315rem;
 }
 .restaurants .restaurants-cards .card-container .card .card-content .card-subtitle {
-  font-size: var(--font-size-17);
-  font-weight: var(--font-weight-300);
-  line-height: var(--line-height-19);
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.245rem;
 }
 .restaurants .restaurants-cards .card-container .card .badge {
   position: absolute;
@@ -199,10 +277,10 @@ a {
   margin-bottom: 7px;
 }
 .footer .footer-container .footer-links li:nth-child(1) a, .footer .footer-container .footer-links li:nth-child(2) a {
-  font-weight: var(--font-weight-500);
+  font-weight: 500;
 }
 .footer .footer-container .footer-links li:nth-child(3) a, .footer .footer-container .footer-links li:nth-child(4) a {
-  font-weight: var(--font-weight-400);
+  font-weight: 400;
 }
 .footer .footer-container .footer-links li a {
   color: #fff;
