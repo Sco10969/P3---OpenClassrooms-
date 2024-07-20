@@ -66,6 +66,15 @@ a {
     }
 }
 
+/* Logo */
+.logo-text {
+    font-family: $font-shrikhand;
+    font-weight: $font-weight-400;
+    font-style: italic;
+    font-size: $font-size-18;
+    line-height: $line-height-28;
+}
+
 /* Main container with maximum width and spacing */
 .main-container {
     width: 100%;
@@ -338,13 +347,7 @@ a {
         gap: 16px;
 
         .footer-logo {
-            .logo-text {
-                font-family: $font-shrikhand;
-                font-weight: $font-weight-400;
-                font-style: italic;
-                font-size: $font-size-18;
-                line-height: $line-height-28;
-            }
+ 
         }
 
         .footer-links {
