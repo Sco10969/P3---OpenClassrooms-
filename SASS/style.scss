@@ -131,10 +131,13 @@ a {
             }
 
             .header-location-text {
+                width: 109px;
                 font-weight: 500;
                 font-size: 1rem;
                 color: #353535;
-                margin: 0;
+                border: none; // Supprimer la bordure de l'input
+                background-color: transparent; // Rendre l'arrière-plan transparent
+                outline: none; // Supprimer le contour lors de la sélection
             }
         }
     }
@@ -142,28 +145,42 @@ a {
 
 /* Styles de la section réservation */
 .reservation {
-    padding: 20px;
+    padding-top: 39px;
+    padding-bottom: 57px;
     background-color: $secondary;
     text-align: center;
+    align-items: center;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 27px;
 
-    .reservation-title {
-        font-weight: $font-weight-700;
-        font-size: $font-size-24;
-        line-height: $line-height-28;
+    > .reservation-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        > .reservation-title {
+            font-weight: $font-weight-700;
+            font-size: $font-size-24;
+            line-height: $line-height-28;
+
+        }
+
+        > .reservation-subtitle {
+            font-weight: $font-weight-300;
+            font-size: $font-size-18;
+            line-height: $line-height-21;
+            color: #353535;
+        }
     }
 
-    .reservation-subtitle {
-        font-weight: $font-weight-300;
-        font-size: $font-size-18;
-        line-height: $line-height-21;
-        color: #353535;
-    }
-
-    .reservation-button {
-        display: inline-block;
+    > .reservation-button {
+        width: 218px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 10px 20px;
         background: $gradient;
         color: $primary;
@@ -184,10 +201,8 @@ a {
 .fonctionnement {
     display: flex;
     flex-direction: column;
-    height: 440px;
-    padding: 20px;
+    padding: 48px 20px 68px 20px;
     background-color: $primary;
-    justify-content: center;
     gap: 26px;
 
     .fonctionnement-header {

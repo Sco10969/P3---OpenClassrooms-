@@ -93,34 +93,49 @@ a {
   height: 16px;
 }
 .header-container .header-content .header-location .header-location-text {
+  width: 109px;
   font-weight: 500;
   font-size: 1rem;
   color: #353535;
-  margin: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
 /* Styles de la section réservation */
 .reservation {
-  padding: 20px;
+  padding-top: 39px;
+  padding-bottom: 57px;
   background-color: #F6F6F6;
   text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+.reservation > .reservation-text {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.reservation .reservation-title {
+.reservation > .reservation-text > .reservation-title {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.75rem;
 }
-.reservation .reservation-subtitle {
+.reservation > .reservation-text > .reservation-subtitle {
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.315rem;
   color: #353535;
 }
-.reservation .reservation-button {
-  display: inline-block;
+.reservation > .reservation-button {
+  width: 218px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 20px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: #FFFFFF;
@@ -131,7 +146,7 @@ a {
   text-decoration: none;
   transition: background-color 0.3s;
 }
-.reservation .reservation-button:hover {
+.reservation > .reservation-button:hover {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 }
 
@@ -139,10 +154,8 @@ a {
 .fonctionnement {
   display: flex;
   flex-direction: column;
-  height: 440px;
-  padding: 20px;
+  padding: 48px 20px 68px 20px;
   background-color: #FFFFFF;
-  justify-content: center;
   gap: 26px;
 }
 .fonctionnement .fonctionnement-header .fonctionnement-title {
