@@ -314,8 +314,13 @@ a {
                 position: relative;
 
                 img {
+                    width: 100%;
                     object-fit: cover;
+                    object-position: bottom;
                     height: 172px;
+                    &.image-adjust {
+                        object-position: 50% 61%;
+                    }
                 }
 
                 .card-content {

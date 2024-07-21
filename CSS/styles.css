@@ -253,8 +253,13 @@ a {
   position: relative;
 }
 .restaurants .restaurants-cards .card-container .card img {
+  width: 100%;
   object-fit: cover;
+  object-position: bottom;
   height: 172px;
+}
+.restaurants .restaurants-cards .card-container .card img.image-adjust {
+  object-position: 50% 61%;
 }
 .restaurants .restaurants-cards .card-container .card .card-content {
   display: flex;
