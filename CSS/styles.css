@@ -35,7 +35,7 @@ a {
 }
 
 /* Logo */
-.logo-text {
+.footlogo-text {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-style: italic;
@@ -66,14 +66,15 @@ a {
   display: none;
 }
 .header-container .header-content .header-logo {
-  background-color: #FFFFFF;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  width: 100%;
+  padding: 14px 0 5px 0;
 }
-.header-container .header-content .header-logo .logo {
-  width: 197px;
-  height: 36px;
+.header-container .header-content .header-logo span {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.875rem;
+  line-height: 2.734rem;
+  color: #101010;
 }
 .header-container .header-content .header-location {
   display: flex;
@@ -103,19 +104,20 @@ a {
   padding: 20px;
   background-color: #F6F6F6;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .reservation .reservation-title {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.75rem;
-  margin-bottom: 10px;
 }
 .reservation .reservation-subtitle {
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.315rem;
   color: #353535;
-  margin-bottom: 20px;
 }
 .reservation .reservation-button {
   display: inline-block;
@@ -141,9 +143,7 @@ a {
   padding: 20px;
   background-color: #FFFFFF;
   justify-content: center;
-}
-.fonctionnement .fonctionnement-header {
-  margin-bottom: 20px;
+  gap: 26px;
 }
 .fonctionnement .fonctionnement-header .fonctionnement-title {
   font-weight: 700;
@@ -154,12 +154,12 @@ a {
 .fonctionnement .fonctionnement-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 .fonctionnement .fonctionnement-content .fonctionnement-step {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 17px;
   background-color: #F6F6F6;
   border-radius: 20px;
   padding: 20px;
@@ -197,6 +197,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 20px;
 }
 .restaurants .restaurants-title {
   padding-top: 20px;
@@ -275,28 +276,38 @@ a {
   align-items: flex-start;
   gap: 16px;
 }
+.footer .footer-container .footer-logo span {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 .footer .footer-container .footer-links {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 .footer .footer-container .footer-links li {
-  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
 }
-.footer .footer-container .footer-links li:nth-child(1) a, .footer .footer-container .footer-links li:nth-child(2) a {
-  font-weight: 500;
-}
-.footer .footer-container .footer-links li:nth-child(3) a, .footer .footer-container .footer-links li:nth-child(4) a {
-  font-weight: 400;
-}
-.footer .footer-container .footer-links li a {
-  color: #fff;
+.footer .footer-container .footer-links li .footer-link {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 11px;
 }
-.footer .footer-container .footer-links li a img {
-  margin-right: 4px;
-}
-.footer .footer-container .footer-links li a:hover {
+.footer .footer-container .footer-links li .footer-link:hover .footer-link-text {
   text-decoration: underline;
+}
+.footer .footer-container .footer-links li .footer-link i {
+  display: inline-block;
+  width: 12px;
+  height: 13px;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */

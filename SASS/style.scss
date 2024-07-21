@@ -3,15 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
-
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-
 
 /* Colors */
 $primary: #FFFFFF;
@@ -28,7 +25,8 @@ $hover-gradient: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
 linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 
 /* Typography */
-$font-shrikhand: 'Shrikhand', cursive;
+$font-shrikhand: 'Shrikhand',
+cursive;
 $font-weight-700: 700;
 $font-weight-500: 500;
 $font-weight-400: 400;
@@ -37,11 +35,12 @@ $font-size-16: 1rem;
 $font-size-18: 1.125rem;
 $font-size-20: 1.25rem;
 $font-size-24: 1.5rem;
+$font-size-30: 1.875rem;
 $font-size-32: 2rem;
 $line-height-28: 1.75rem;
 $line-height-21: 1.315rem;
 $line-height-19: 1.245rem;
-
+$line-height-43: 2.734rem;
 
 /* Centering the page content */
 body {
@@ -67,7 +66,7 @@ a {
 }
 
 /* Logo */
-.logo-text {
+.footlogo-text {
     font-family: $font-shrikhand;
     font-weight: $font-weight-400;
     font-style: italic;
@@ -81,14 +80,12 @@ a {
     max-width: 375px;
     display: flex;
     flex-direction: column;
-    // gap: 35px;
 }
 
 /* Styles du header */
 .header-container {
     text-align: center;
     width: 100%;
-
 
     .header-content {
         display: flex;
@@ -102,15 +99,15 @@ a {
         }
 
         .header-logo {
-            background-color: $primary;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1;
+            padding: 14px 0 5px 0;
 
-            width: 100%;
-
-            .logo {
-                width: 197px;
-                height: 36px;
+            span {
+                font-family: $font-shrikhand;
+                font-weight: $font-weight-400;
+                font-style: italic;
+                font-size: $font-size-30;
+                line-height: $line-height-43;
+                color: #101010;
             }
         }
 
@@ -148,12 +145,14 @@ a {
     padding: 20px;
     background-color: $secondary;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
     .reservation-title {
         font-weight: $font-weight-700;
         font-size: $font-size-24;
         line-height: $line-height-28;
-        margin-bottom: 10px;
     }
 
     .reservation-subtitle {
@@ -161,7 +160,6 @@ a {
         font-size: $font-size-18;
         line-height: $line-height-21;
         color: #353535;
-        margin-bottom: 20px;
     }
 
     .reservation-button {
@@ -190,10 +188,9 @@ a {
     padding: 20px;
     background-color: #FFFFFF;
     justify-content: center;
+    gap: 26px;
 
     .fonctionnement-header {
-        margin-bottom: 20px;
-
         .fonctionnement-title {
             font-weight: $font-weight-700;
             font-size: $font-size-32;
@@ -205,12 +202,12 @@ a {
     .fonctionnement-content {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
 
         .fonctionnement-step {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 17px;
             background-color: $secondary;
             border-radius: 20px;
             padding: 20px;
@@ -254,6 +251,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
 
     .restaurants-title {
         padding-top: 20px;
@@ -264,21 +262,18 @@ a {
         font-size: $font-size-24;
         line-height: $line-height-28;
         color: #000000;
-
     }
 
     .restaurants-cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
         gap: 18px;
-        justify-content: center; // Modification pour centrer les cartes
+        justify-content: center;
         width: 100%;
         padding: 0 17px 0 18px;
         margin-bottom: 66px;
 
         .card-container {
-            // flex: 1;
-
             .card {
                 display: flex;
                 background-color: $primary;
@@ -347,40 +342,41 @@ a {
         gap: 16px;
 
         .footer-logo {
- 
+            span {
+                font-family: $font-shrikhand;
+                font-weight: $font-weight-400;
+                font-style: italic;
+                font-size: $font-size-18;
+                line-height: $line-height-28;
+            }
         }
 
         .footer-links {
             list-style: none;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
 
             li {
-                margin-bottom: 7px;
+                display: flex;
+                align-items: center;
 
-                &:nth-child(1),
-                &:nth-child(2) {
-                    a {
-                        font-weight: $font-weight-500;
-                    }
-                }
-
-                &:nth-child(3),
-                &:nth-child(4) {
-                    a {
-                        font-weight: $font-weight-400;
-                    }
-                }
-
-                a {
-                    color: #fff;
+                .footer-link {
                     text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 11px;
 
-                    img {
-                        margin-right: 4px;
+                    &:hover .footer-link-text {
+                        text-decoration: underline;
                     }
 
-                    &:hover {
-                        text-decoration: underline;
+                    i {
+                        display: inline-block;
+                        width: 12px;
+                        height: 13px;
+                        font-size: 12px;
                     }
                 }
             }
