@@ -362,6 +362,20 @@ a {
                 display: flex;
                 align-items: center;
 
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        a {
+                            font-weight: $font-weight-500;
+                        }
+                    }
+
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        a {
+                            font-weight: $font-weight-400;
+                        }
+                    }
+
                 .footer-link {
                     text-decoration: none;
                     display: flex;

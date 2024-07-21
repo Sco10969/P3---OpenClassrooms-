@@ -294,6 +294,12 @@ a {
   display: flex;
   align-items: center;
 }
+.footer .footer-container .footer-links li:nth-child(1) a, .footer .footer-container .footer-links li:nth-child(2) a {
+  font-weight: 500;
+}
+.footer .footer-container .footer-links li:nth-child(3) a, .footer .footer-container .footer-links li:nth-child(4) a {
+  font-weight: 400;
+}
 .footer .footer-container .footer-links li .footer-link {
   text-decoration: none;
   display: flex;
