@@ -147,28 +147,33 @@ a {
 }
 .fonctionnement .fonctionnement-header .fonctionnement-title {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.75rem;
-  color: #000000;
 }
 .fonctionnement .fonctionnement-content {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.fonctionnement .fonctionnement-content .fonctionnement-step {
+.fonctionnement .fonctionnement-content .fonctionnement-step-container {
+  width: 100%;
+  display: flex;
+}
+.fonctionnement .fonctionnement-content .fonctionnement-step-container .fonctionnement-step {
   display: flex;
   align-items: center;
-  gap: 17px;
   background-color: #F6F6F6;
   border-radius: 20px;
   padding: 20px;
   transition: background-color 0.3s ease;
+  width: 100%;
+  position: relative;
+  gap: 23px;
 }
-.fonctionnement .fonctionnement-content .fonctionnement-step:hover .fonctionnement-icon {
+.fonctionnement .fonctionnement-content .fonctionnement-step-container .fonctionnement-step:hover .fonctionnement-icon {
   color: #9356DC;
 }
-.fonctionnement .fonctionnement-content .fonctionnement-step .fonctionnement-number {
+.fonctionnement .fonctionnement-content .fonctionnement-step-container .fonctionnement-step .fonctionnement-number {
   line-height: 1.75rem;
   color: #FFFFFF;
   background-color: #9356DC;
@@ -178,13 +183,18 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.fonctionnement .fonctionnement-content .fonctionnement-step .fonctionnement-icon {
-  font-size: 1.25rem;
+.fonctionnement .fonctionnement-content .fonctionnement-step-container .fonctionnement-step .fonctionnement-icon {
   color: #7E7E7E;
   transition: color 0.3s ease;
+  margin-left: 18px;
 }
-.fonctionnement .fonctionnement-content .fonctionnement-step span {
+.fonctionnement .fonctionnement-content .fonctionnement-step-container .fonctionnement-step span {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.245rem;
