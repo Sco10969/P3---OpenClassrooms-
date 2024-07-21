@@ -291,6 +291,32 @@ a {
   font-size: 0.875rem;
   line-height: 1.0625rem;
 }
+.restaurants .restaurants-cards .card-container .card .favorite-checkbox {
+  display: none;
+}
+.restaurants .restaurants-cards .card-container .card .favorite-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #101010;
+  cursor: pointer;
+}
+.restaurants .restaurants-cards .card-container .card .favorite-icon:hover {
+  color: #9356DC;
+}
+.restaurants .restaurants-cards .card-container .card .favorite-icon .filled-heart {
+  display: none;
+}
+.restaurants .restaurants-cards .card-container .card .favorite-checkbox:checked + .favorite-icon .filled-heart {
+  display: inline;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants .restaurants-cards .card-container .card .favorite-checkbox:checked + .favorite-icon .far {
+  display: none;
+}
 
 /* Styles du footer */
 .footer {

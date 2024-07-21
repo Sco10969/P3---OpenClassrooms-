@@ -137,9 +137,9 @@ a {
                 font-weight: 500;
                 font-size: 1rem;
                 color: #353535;
-                border: none; // Supprimer la bordure de l'input
-                background-color: transparent; // Rendre l'arrière-plan transparent
-                outline: none; // Supprimer le contour lors de la sélection
+                border: none;
+                background-color: transparent;
+                outline: none;
             }
         }
     }
@@ -157,19 +157,19 @@ a {
     flex-direction: column;
     gap: 27px;
 
-    > .reservation-text {
+    >.reservation-text {
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        > .reservation-title {
+        >.reservation-title {
             font-weight: $font-weight-700;
             font-size: $font-size-24;
             line-height: $line-height-28;
 
         }
 
-        > .reservation-subtitle {
+        >.reservation-subtitle {
             font-weight: $font-weight-300;
             font-size: $font-size-18;
             line-height: $line-height-21;
@@ -177,7 +177,7 @@ a {
         }
     }
 
-    > .reservation-button {
+    >.reservation-button {
         width: 218px;
         height: 50px;
         display: flex;
@@ -219,11 +219,11 @@ a {
         display: flex;
         flex-direction: column;
         gap: 25px;
-    
+
         .fonctionnement-step-container {
             width: 100%;
             display: flex;
-    
+
             .fonctionnement-step {
                 display: flex;
                 align-items: center;
@@ -234,11 +234,11 @@ a {
                 width: 100%;
                 position: relative;
                 gap: 23px;
-    
+
                 &:hover .fonctionnement-icon {
                     color: $blue-magenta;
                 }
-    
+
                 .fonctionnement-number {
                     line-height: $line-height-28;
                     color: $primary;
@@ -255,13 +255,13 @@ a {
                     top: 50%;
                     transform: translateY(-50%);
                 }
-    
+
                 .fonctionnement-icon {
                     color: #7E7E7E;
                     transition: color 0.3s ease;
                     margin-left: 18px;
                 }
-    
+
                 span {
                     font-weight: $font-weight-500;
                     font-size: $font-size-16;
@@ -315,6 +315,7 @@ a {
                     object-fit: cover;
                     object-position: bottom;
                     height: 172px;
+
                     &.image-adjust {
                         object-position: 50% 61%;
                     }
@@ -356,6 +357,38 @@ a {
                         font-size: $font-size-14;
                         line-height: $line-height-17;
                     }
+                }
+
+                .favorite-checkbox {
+                    display: none;
+                }
+
+                .favorite-icon {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    font-size: 1.5rem;
+                    color: #101010;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $blue-magenta;
+                    }
+
+                    .filled-heart {
+                        display: none;
+                    }
+                }
+
+                .favorite-checkbox:checked+.favorite-icon .filled-heart {
+                    display: inline;
+                    background: $gradient;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                .favorite-checkbox:checked+.favorite-icon .far {
+                    display: none;
                 }
             }
         }
