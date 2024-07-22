@@ -310,6 +310,11 @@ a {
                 height: 251px;
                 position: relative;
 
+                &:hover {
+                    transition: transform 0.3s;
+                    transform: scale(1.05);
+                }
+
                 img {
                     width: 100%;
                     object-fit: cover;

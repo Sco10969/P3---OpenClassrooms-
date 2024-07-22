@@ -249,6 +249,10 @@ a {
   height: 251px;
   position: relative;
 }
+.restaurants .restaurants-cards .card-container .card:hover {
+  transition: transform 0.3s;
+  transform: scale(1.05);
+}
 .restaurants .restaurants-cards .card-container .card img {
   width: 100%;
   object-fit: cover;
