@@ -361,8 +361,9 @@ a {
   align-items: center;
   gap: 11px;
 }
-.footer .footer-container .footer-links li .footer-link:hover .footer-link-text {
-  text-decoration: underline;
+.footer .footer-container .footer-links li .footer-link:hover {
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0.5;
 }
 .footer .footer-container .footer-links li .footer-link i {
   display: inline-block;

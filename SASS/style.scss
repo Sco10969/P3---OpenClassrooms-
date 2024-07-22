@@ -449,8 +449,9 @@ a {
                     align-items: center;
                     gap: 11px;
 
-                    &:hover .footer-link-text {
-                        text-decoration: underline;
+                    &:hover {
+                        transition: opacity .25s ease-in-out;
+                        opacity: 0.5;
                     }
 
                     i {
