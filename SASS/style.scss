@@ -243,14 +243,9 @@ a {
                 background-color: $color-background;
                 border-radius: 20px;
                 padding: 20px;
-                transition: background-color 0.3s ease;
                 width: 100%;
                 position: relative;
                 gap: 23px;
-
-                &:hover .fonctionnement-icon {
-                    color: $color-accent;
-                }
 
                 .fonctionnement-number {
                     line-height: $line-height-28;
@@ -271,7 +266,6 @@ a {
 
                 .fonctionnement-icon {
                     color: #7E7E7E;
-                    transition: color 0.3s ease;
                     margin-left: 18px;
                 }
 
@@ -279,6 +273,12 @@ a {
                     font-weight: $font-weight-500;
                     font-size: $font-size-16;
                     line-height: $line-height-19;
+                }
+            }
+
+            &:last-child {
+                .fonctionnement-icon {
+                    color: $color-accent;
                 }
             }
         }

@@ -187,13 +187,9 @@ a {
   background-color: #F6F6F6;
   border-radius: 20px;
   padding: 20px;
-  transition: background-color 0.3s ease;
   width: 100%;
   position: relative;
   gap: 23px;
-}
-.fonctionnement .fonctionnement-content .fonctionnement-step-container .fonctionnement-step:hover .fonctionnement-icon {
-  color: #9356DC;
 }
 .fonctionnement .fonctionnement-content .fonctionnement-step-container .fonctionnement-step .fonctionnement-number {
   line-height: 1.75rem;
@@ -213,13 +209,15 @@ a {
 }
 .fonctionnement .fonctionnement-content .fonctionnement-step-container .fonctionnement-step .fonctionnement-icon {
   color: #7E7E7E;
-  transition: color 0.3s ease;
   margin-left: 18px;
 }
 .fonctionnement .fonctionnement-content .fonctionnement-step-container .fonctionnement-step span {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.245rem;
+}
+.fonctionnement .fonctionnement-content .fonctionnement-step-container:last-child .fonctionnement-icon {
+  color: #9356DC;
 }
 
 /* Styles de la section des restaurants */
