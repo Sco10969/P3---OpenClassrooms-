@@ -409,9 +409,14 @@ a {
                         font-size: 1.5rem;
                         color: #101010;
                         cursor: pointer;
+                        transition: all 0.3s ease;
 
                         &:hover {
                             color: $color-accent;
+                        }
+
+                        .empty-heart, .filled-heart {
+                            transition: all 0.3s ease;
                         }
 
                         .empty-heart {

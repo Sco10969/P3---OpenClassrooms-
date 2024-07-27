@@ -326,9 +326,13 @@ a {
   font-size: 1.5rem;
   color: #101010;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .restaurants .restaurants-cards .card-container .card .favorite-icon:hover {
   color: #9356DC;
+}
+.restaurants .restaurants-cards .card-container .card .favorite-icon .empty-heart, .restaurants .restaurants-cards .card-container .card .favorite-icon .filled-heart {
+  transition: all 0.3s ease;
 }
 .restaurants .restaurants-cards .card-container .card .favorite-icon .empty-heart {
   display: inline;
