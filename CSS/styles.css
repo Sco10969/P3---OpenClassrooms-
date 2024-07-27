@@ -310,35 +310,39 @@ a {
   display: none;
 }
 .restaurants .restaurants-cards .card-container .card .favorite-checkbox:checked + .favorite-icon .filled-heart {
-  display: inline;
+  opacity: 1;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .restaurants .restaurants-cards .card-container .card .favorite-checkbox:checked + .favorite-icon .empty-heart {
-  display: none;
+  opacity: 0;
 }
 .restaurants .restaurants-cards .card-container .card .favorite-icon {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  top: 85%;
+  right: 25px;
   font-size: 1.5rem;
   color: #101010;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .restaurants .restaurants-cards .card-container .card .favorite-icon:hover {
   color: #9356DC;
 }
 .restaurants .restaurants-cards .card-container .card .favorite-icon .empty-heart, .restaurants .restaurants-cards .card-container .card .favorite-icon .filled-heart {
   transition: all 0.3s ease;
+  position: absolute;
 }
 .restaurants .restaurants-cards .card-container .card .favorite-icon .empty-heart {
-  display: inline;
+  opacity: 1;
 }
 .restaurants .restaurants-cards .card-container .card .favorite-icon .filled-heart {
-  display: none;
+  opacity: 0;
 }
 
 /* Styles du footer */
