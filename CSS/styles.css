@@ -277,17 +277,17 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 8px;
+  gap: 5px;
   color: black;
   padding: 15px;
 }
 .restaurants .restaurants-cards .card-container .card .card-content .card-title {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.315rem;
 }
 .restaurants .restaurants-cards .card-container .card .card-content .card-subtitle {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   font-weight: 300;
   line-height: 1.245rem;
 }

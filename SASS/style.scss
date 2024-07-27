@@ -43,6 +43,7 @@ $font-size-30: 1.875rem;
 $font-size-24: 1.5rem;
 $font-size-20: 1.25rem;
 $font-size-18: 1.125rem;
+$font-size-17: 1.0625rem;
 $font-size-16: 1rem;
 $font-size-14: 0.875rem;
 
@@ -348,18 +349,18 @@ a {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    gap: 8px;
+                    gap: 5px;
                     color: black;
                     padding: 15px;
 
                     .card-title {
-                        font-size: $font-size-16;
+                        font-size: $font-size-18;
                         font-weight: $font-weight-700;
                         line-height: $line-height-21;
                     }
 
                     .card-subtitle {
-                        font-size: $font-size-18;
+                        font-size: $font-size-17;
                         font-weight: $font-weight-300;
                         line-height: $line-height-19;
                     }
