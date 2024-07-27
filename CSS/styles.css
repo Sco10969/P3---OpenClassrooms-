@@ -482,8 +482,11 @@ a {
     flex-direction: row;
     gap: 7px;
   }
-  .footer .footer-container .footer-links li:nth-child(2), .footer .footer-container .footer-links li:last-child {
-    margin-right: 46px;
+  .footer .footer-container .footer-links li a {
+    min-width: 130px;
+  }
+  .footer .footer-container .footer-links li:nth-child(2) a, .footer .footer-container .footer-links li:last-child a {
+    min-width: 190px;
   }
 }
 
