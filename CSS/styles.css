@@ -12,6 +12,10 @@
 
 /* Colors */
 /* Typography */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Centering the page content */
 body {
   display: flex;
@@ -74,8 +78,6 @@ a {
 }
 .header-container .header-content .header-logo {
   padding: 14px 0 5px 0;
-}
-.header-container .header-content .header-logo span {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-style: italic;
@@ -350,12 +352,18 @@ a {
   align-items: flex-start;
   gap: 16px;
 }
-.footer .footer-container .footer-logo span {
+.footer .footer-container .footer-logo-title {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-style: italic;
   font-size: 1.125rem;
   line-height: 1.75rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.footer .footer-container .footer-logo-title:hover {
+  opacity: 0.5;
 }
 .footer .footer-container .footer-links {
   list-style: none;
