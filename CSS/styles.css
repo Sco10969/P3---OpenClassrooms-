@@ -311,19 +311,6 @@ a {
   font-size: 0.875rem;
   line-height: 1.0625rem;
 }
-.restaurants .restaurants-cards .card-container .card .favorite-checkbox {
-  display: none;
-}
-.restaurants .restaurants-cards .card-container .card .favorite-checkbox:checked + .favorite-icon .filled-heart {
-  opacity: 1;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurants .restaurants-cards .card-container .card .favorite-checkbox:checked + .favorite-icon .empty-heart {
-  opacity: 0;
-}
 .restaurants .restaurants-cards .card-container .card .favorite-icon {
   position: absolute;
   top: 85%;
@@ -338,6 +325,19 @@ a {
 }
 .restaurants .restaurants-cards .card-container .card .favorite-icon:hover {
   color: #9356DC;
+}
+.restaurants .restaurants-cards .card-container .card .favorite-icon .favorite-checkbox {
+  display: none;
+}
+.restaurants .restaurants-cards .card-container .card .favorite-icon .favorite-checkbox:checked ~ .filled-heart {
+  opacity: 1;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants .restaurants-cards .card-container .card .favorite-icon .favorite-checkbox:checked ~ .empty-heart {
+  opacity: 0;
 }
 .restaurants .restaurants-cards .card-container .card .favorite-icon .empty-heart, .restaurants .restaurants-cards .card-container .card .favorite-icon .filled-heart {
   transition: all 0.3s ease;

@@ -389,24 +389,6 @@ a {
                 }
 
                 .favorite {
-                    &-checkbox {
-                        display: none;
-
-                        &:checked + .favorite-icon {
-                            .filled-heart {
-                                opacity: 1;
-                                background: $gradient-heart;
-                                -webkit-background-clip: text;
-                                background-clip: text;
-                                -webkit-text-fill-color: transparent;
-                            }
-
-                            .empty-heart {
-                                opacity: 0;
-                            }
-                        }
-                    }
-
                     &-icon {
                         position: absolute;
                         top: 85%;
@@ -418,20 +400,36 @@ a {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-
+    
                         &:hover {
                             color: $color-accent;
                         }
-
+    
+                        .favorite-checkbox {
+                            display: none;
+    
+                            &:checked ~ .filled-heart {
+                                opacity: 1;
+                                background: $gradient-heart;
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+    
+                            &:checked ~ .empty-heart {
+                                opacity: 0;
+                            }
+                        }
+    
                         .empty-heart, .filled-heart {
                             transition: all 0.3s ease;
                             position: absolute;
                         }
-
+    
                         .empty-heart {
                             opacity: 1;
                         }
-
+    
                         .filled-heart {
                             opacity: 0;
                         }
