@@ -84,6 +84,11 @@ a {
     }
 }
 
+/* Prevents text selection */
+.no-select {
+    user-select: none;
+}
+
 /* Logo */
 .footlogo-text {
     font-family: $font-shrikhand;
