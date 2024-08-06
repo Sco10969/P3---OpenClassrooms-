@@ -16,12 +16,20 @@
 }
 
 .restaurant {
-    width: 375px;
-    height: 275px;
+    width: 100%;
+    max-width: 375px;
+    height: auto;
+    aspect-ratio: 375 / 275;
     overflow: hidden;
 
+    @media (min-width: 768px) {
+        max-width: 100%;
+        height: 40vh;
+        min-height: 275px;
+    }
+
     &__img {
-        width: 375px;
+        width: 100%;
         height: 100%;
         object-fit: cover;
     }
@@ -69,6 +77,70 @@
         }
     }
 
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__item {
+        @extend .fonctionnement__step;
+        justify-content: space-between;
+        padding: 15px;
+        cursor: pointer;
+        overflow: hidden;
+        gap: 12px;
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1;
+        }
+
+        &-title {
+            @extend .fonctionnement__step-text;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-description {
+            font-weight: $font-weight-300;
+            font-size: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-price {
+            font-weight: $font-weight-700;
+            align-self: flex-end;
+        }
+
+        &-check {
+            background-color: $color-badge;
+            width: 59px;
+            height: 69px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: -59px;
+            top: 0;
+            transition: transform 0.3s ease;
+
+            i {
+                color: $color-white;
+                font-size: 20px;
+            }
+        }
+
+        &:hover &-check {
+            transform: translateX(-59px);
+        }
+    }
+
     &__order {
         display: flex;
         justify-content: center;
@@ -80,8 +152,6 @@
         }
     }
 }
-
-// Ajoutez ici d'autres styles spécifiques aux menus des restaurants
 
 @media screen and (min-width: 986px) {
     .menu {
