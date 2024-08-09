@@ -41,12 +41,13 @@ $line-height-19: 1.245rem;
 $line-height-17: 1.0625rem;
 $font-size-32: 2rem;
 $font-size-30: 1.875rem;
-$font-size-28: 1.75rem;  // Ajout de la taille de police pour 28px
+$font-size-28: 1.75rem;
 $font-size-24: 1.5rem;
 $font-size-20: 1.25rem;
 $font-size-18: 1.125rem;
 $font-size-17: 1.0625rem;
 $font-size-16: 1rem;
+$font-size-15: 0.9375rem;
 $font-size-14: 0.875rem;
 
 html {
@@ -190,12 +191,12 @@ a {
     }
 
     &__button {
-        width: 218px;
+        max-width: 218px;
         height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px 20px;
+        padding: 0 48px;
         background: $gradient-primary;
         color: $color-white;
         font-weight: $font-weight-500;
@@ -204,6 +205,7 @@ a {
         border-radius: 25px;
         text-decoration: none;
         transition: background-color 0.3s;
+        white-space: nowrap;
 
         &:hover {
             background: $gradient-hover;
@@ -275,8 +277,15 @@ a {
     }
 }
 
+
 /* Styles de la section des restaurants */
 .restaurants {
+    &__container {
+        display: flex;
+        justify-content: center;
+        background-color: $color-background;;
+    }
+
     flex: 1;
     background-color: $color-background;
     display: flex;
@@ -618,5 +627,12 @@ a {
                 }
             }
         }
+    }
+}
+@media screen and (min-width: 1440px) {
+
+    .restaurants {
+        padding: 30px 0;
+        max-width: 1080px;
     }
 }
