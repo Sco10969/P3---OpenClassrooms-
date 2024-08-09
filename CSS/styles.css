@@ -611,7 +611,6 @@ a {
   width: 100%;
   overflow: hidden;
   transition: width 0.3s ease-in-out;
-  border: 1px solid red;
 }
 .menu__item-title, .menu__item-description {
   white-space: nowrap;
@@ -622,7 +621,6 @@ a {
 .menu__item-title {
   font-weight: 500;
   font-size: 1.125rem;
-  border: 1px solid red;
 }
 .menu__item-description {
   font-weight: 300;
