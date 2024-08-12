@@ -153,11 +153,12 @@ a {
   line-height: 1.245rem;
   border-radius: 25px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
   white-space: nowrap;
 }
 .reservation__button:hover, .menu__order-button:hover {
-  background: linear-gradient(to bottom, #a16be0 -11.44%, #ff93e1 123.93%);
+  opacity: 0.8;
+  transform: scale(1.01);
 }
 
 /* Styles de la section fonctionnement */

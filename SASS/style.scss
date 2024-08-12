@@ -191,11 +191,12 @@ a {
         line-height: $line-height-19;
         border-radius: 25px;
         text-decoration: none;
-        transition: background-color 0.3s;
+        transition: opacity 300ms ease-out, transform 300ms ease-out;
         white-space: nowrap;
 
         &:hover {
-            background: $gradient-hover;
+            opacity: 0.8;
+            transform: scale(1.01);
         }
     }
 }
@@ -267,18 +268,18 @@ a {
 
 /* Styles de la section des restaurants */
 .restaurants {
-    &__container {
-        display: flex;
-        justify-content: center;
-        background-color: $color-background;;
-    }
-
     flex: 1;
     background-color: $color-background;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        background-color: $color-background;;
+    }
 
     &__title {
         padding: 54px 80px 20px 20px;

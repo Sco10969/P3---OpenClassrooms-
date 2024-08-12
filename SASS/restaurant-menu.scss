@@ -104,7 +104,7 @@
         border-radius: 15px;
         cursor: pointer;
         overflow: hidden;
-        background-color: $color-white;
+        background-color: #FFFFFF;
         position: relative;
 
         &-content {
@@ -154,7 +154,7 @@
             transition: transform 0.3s ease-in-out;
 
             i {
-                color: $color-white;
+                color: #FFFFFF;
                 font-size: 1.25rem;
             }
         }
