@@ -257,19 +257,16 @@ a {
   flex-direction: column;
   height: 251px;
   position: relative;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 300ms ease-out;
 }
 .restaurants__card:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 .restaurants__card-image, .restaurant__img {
   width: 100%;
   object-fit: cover;
   object-position: bottom;
   height: 172px;
-}
-.restaurants__card-image--adjust {
-  object-position: 50% 61%;
 }
 .restaurants__card-content {
   display: flex;

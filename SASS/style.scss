@@ -308,10 +308,10 @@ a {
         flex-direction: column;
         height: 251px;
         position: relative;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 300ms ease-out;
 
         &:hover {
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
 
         &-image {
@@ -319,10 +319,6 @@ a {
             object-fit: cover;
             object-position: bottom;
             height: 172px;
-
-            &--adjust {
-                object-position: 50% 61%;
-            }
         }
 
         &-content {
