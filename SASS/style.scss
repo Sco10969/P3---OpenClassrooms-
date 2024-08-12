@@ -91,6 +91,7 @@ a {
 /* Main container with maximum width and spacing */
 .main-container {
     width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -108,7 +109,7 @@ a {
     }
 
     &__icon-goback {
-        display: none; // Masquer l'icône de retour pour l'instant
+        display: none;
     }
 
     &__logo {
@@ -499,10 +500,6 @@ a {
 
 /* Media queries Desktop */
 @media screen and (min-width: 986px) {
-    .main-container {
-        max-width: 100%;
-    }
-
     /* Header */
     .header {
         &__content {
@@ -614,7 +611,6 @@ a {
     }
 }
 @media screen and (min-width: 1440px) {
-
     .restaurants {
         padding: 30px 0;
         max-width: 1080px;
