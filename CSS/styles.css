@@ -30,6 +30,326 @@ a {
   text-decoration: none;
 }
 
+/* see animators for keyframes */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: loader__anim 3s forwards;
+  background-color: rgba(255, 255, 255, 0.3);
+  /* encapsulate the actors (circle, stove, particles) */
+  /* a grey circle as background for the stove */
+}
+.loader__actors {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(255, 121, 218, 0.7), #18092a);
+  /*	background				: radial-gradient($colour_secondary,$colour_primary);*/
+  /*	background				: radial-gradient($colour_secondary,darken($colour_primary,50%)); */
+}
+.loader__circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background: #444;
+  transform: translate(-10px, -25px);
+  animation: loader__anim--circle 3s infinite ease-in-out;
+}
+.loader__circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 100%;
+  box-shadow: 1rem 1rem 0.5rem rgba(85, 85, 85, 0.3);
+  opacity: 1;
+  animation: loader__anim--circle-1 3s infinite ease-in-out;
+}
+.loader__circle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 100%;
+  box-shadow: 1rem 1rem 0.2rem rgba(85, 85, 85, 0.3);
+  opacity: 0;
+  animation: loader__anim--circle-2 3s infinite ease-in-out;
+}
+.loader__stove {
+  position: relative;
+  top: 30px;
+  animation: loader__anim--stove 2s linear infinite;
+}
+.loader__stove__container {
+  stroke: #9356DC;
+  stroke-width: 5px;
+  fill: transparent;
+}
+.loader__stove__content {
+  fill: #FD8;
+}
+.loader__emitter {
+  /* each emitter can generate a "particule" ":before" and ":after" */
+  position: relative;
+}
+.loader__emitter::before, .loader__emitter::after {
+  position: absolute;
+}
+.loader__emitter:nth-child(2)::before {
+  content: "Oh";
+  font-size: 20px;
+  color: #fd8;
+  animation: loader__anim--oh 1.1s linear infinite;
+  opacity: 1;
+}
+.loader__emitter:nth-child(2)::after {
+  content: "Oh";
+  font-size: 20px;
+  color: #9356DC;
+  animation: loader__anim--oh-2 1.1s linear infinite;
+  opacity: 0;
+}
+.loader__emitter:nth-child(3)::before {
+  content: "My";
+  font-size: 18px;
+  color: #fd8;
+  animation: loader__anim--my 1.3s linear infinite;
+  opacity: 1;
+}
+.loader__emitter:nth-child(3)::after {
+  content: "My";
+  font-size: 18px;
+  color: #FF79DA;
+  animation: loader__anim--my-2 1.3s linear infinite;
+  opacity: 0;
+}
+.loader__emitter:nth-child(4)::before {
+  content: "food";
+  font-size: 15px;
+  color: #fd8;
+  animation: loader__anim--food 0.9s linear infinite;
+  opacity: 1;
+}
+.loader__emitter:nth-child(4)::after {
+  content: "food";
+  font-size: 15px;
+  color: #99E2D0;
+  animation: loader__anim--food-2 0.9s linear infinite;
+  opacity: 0;
+}
+
+@keyframes loader__anim {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loader__anim--circle {
+  0% {
+    transform: translate(-0.7rem, -1.5rem);
+  }
+  20% {
+    transform: translate(-0.2rem, -1.5rem);
+  }
+  50% {
+    transform: translate(-0.7rem, -2rem);
+  }
+  80% {
+    transform: translate(-0.2rem, -1.2rem);
+  }
+  100% {
+    transform: translate(-0.7rem, -1.5rem);
+  }
+}
+@keyframes loader__anim--circle-1 {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loader__anim--circle-2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loader__anim--rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader__anim--oh {
+  0% {
+    opacity: 0;
+    transform: translate(30px, 0px) rotate(30deg) scale(1);
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(30px, -150px) rotate(-50deg) scale(0.5);
+  }
+}
+@keyframes loader__anim--oh-2 {
+  0% {
+    opacity: 0;
+    transform: translate(30px, 0px) rotate(30deg) scale(1);
+  }
+  15% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(30px, -150px) rotate(-50deg) scale(0.5);
+  }
+}
+@keyframes loader__anim--my {
+  0% {
+    opacity: 0;
+    transform: translate(50px, 0px) rotate(-40deg) scale(1);
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(40px, -150px) rotate(80deg) scale(0.5);
+  }
+}
+@keyframes loader__anim--my-2 {
+  0% {
+    opacity: 0;
+    transform: translate(50px, 0px) rotate(-40deg) scale(1);
+  }
+  15% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(40px, -150px) rotate(80deg) scale(0.5);
+  }
+}
+@keyframes loader__anim--food {
+  0% {
+    opacity: 0;
+    transform: translate(70px, 0px) rotate(60deg) scale(1);
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(60px, -150px) rotate(-30deg) scale(0.5);
+  }
+}
+@keyframes loader__anim--food-2 {
+  0% {
+    opacity: 0;
+    transform: translate(70px, 0px) rotate(60deg) scale(1);
+  }
+  15% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(60px, -150px) rotate(-30deg) scale(0.5);
+  }
+}
+@keyframes loader__anim--stove {
+  0% {
+    transform: rotate(-1deg) translate(0px, 1px);
+  }
+  10% {
+    transform: rotate(1deg) translate(-2px, 2px);
+  }
+  20% {
+    transform: rotate(0deg) translate(-1px, 0px);
+  }
+  30% {
+    transform: rotate(1deg) translate(2px, -1px);
+  }
+  40% {
+    transform: rotate(-1deg) translate(1px, -2px);
+  }
+  50% {
+    transform: rotate(1deg) translate(-2px, 1px);
+  }
+  60% {
+    transform: rotate(2deg) translate(0px, 2px);
+  }
+  70% {
+    transform: rotate(1deg) translate(-1px, 1px);
+  }
+  80% {
+    transform: rotate(-1deg) translate(-1px, -1px);
+  }
+  90% {
+    transform: rotate(0deg) translate(1px, 2px);
+  }
+  100% {
+    transform: rotate(-1deg) translate(2px, 1px);
+  }
+}
 /* Global Shadow */
 .shadow {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
