@@ -13,15 +13,16 @@
 /* Colors */
 $color-background: #F6F6F6;
 $color-badge: #99E2D0;
-$color-new: #008766;
-$color-accent: #9356DC;
 
+$color-new: #008766;
+
+$color-primary: #9356DC;
 $color-secondary: #FF79DA;
 
 
-$gradient-primary: linear-gradient(to bottom, $color-accent -11.44%, $color-secondary 123.93%);
-$gradient-hover: linear-gradient(to bottom, lighten($color-accent, 5%) -11.44%, lighten($color-secondary, 5%) 123.93%);
-$gradient-heart: linear-gradient(193.33deg, $color-accent -11.44%, $color-secondary 123.93%);
+$gradient-primary: linear-gradient(to bottom, $color-primary -11.44%, $color-secondary 123.93%);
+$gradient-hover: linear-gradient(to bottom, lighten($color-primary, 5%) -11.44%, lighten($color-secondary, 5%) 123.93%);
+$gradient-heart: linear-gradient(193.33deg, $color-primary -11.44%, $color-secondary 123.93%);
 
 /* Typography */
 $font-shrikhand: 'Shrikhand', cursive;
@@ -37,9 +38,10 @@ $font-size-24: 1.5rem;
 $font-size-18: 1.125rem;
 $font-size-16: 1rem;
 
-html {
-    scroll-behavior: smooth;
-}
+
+$font-title: $font-size-32;
+
+
 
 /* Centering the page content */
 body {
@@ -47,7 +49,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
+    -webkit-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* General styles for links */
@@ -438,7 +441,7 @@ $colour_tertiary : #99E2D0;
         &-number {
             line-height: $line-height-28;
             color: #FFFFFF;
-            background-color: $color-accent;
+            background-color: $color-primary;
             border-radius: 50%;
             width: 24px;
             height: 24px;
@@ -457,7 +460,7 @@ $colour_tertiary : #99E2D0;
             margin-left: 18px;
 
             &--accent {
-                color: $color-accent;
+                color: $color-primary;
             }
         }
 
@@ -586,7 +589,7 @@ $colour_tertiary : #99E2D0;
         cursor: pointer;
 
         &:hover {
-            color: $color-accent;
+            color: $color-primary;
         }
 
         &-checkbox {
