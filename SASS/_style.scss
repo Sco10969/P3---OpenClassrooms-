@@ -377,7 +377,11 @@ a {
             }
         }
     }
-
+    &__favorite-container {
+        display: flex;
+        align-items: center;
+    }
+    
     &__favorite {
         position: relative;
         width: 24px;
