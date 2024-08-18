@@ -1,0 +1,58 @@
+body {
+    &.has-loader {
+        overflow: hidden;
+        animation: enable-scroll 0s 3s forwards;
+    }
+}
+
+.loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: loader__anim 3s 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    background-color: rgba(255, 255, 255, 0.9);
+    font: bold 48px $font-shrikhand;
+    color: transparent;
+    letter-spacing: 2px;
+}
+
+.loader::before {
+    content: 'ohmyfood';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    background: $gradient-primary;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    overflow: hidden;
+    animation: animloader 2.5s 0.2s ease-in-out forwards;
+    text-align: center;
+}   
+
+@keyframes loader__anim {
+    0%, 80% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes animloader {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes enable-scroll {
+    to {
+        overflow: visible;
+    }
+}
