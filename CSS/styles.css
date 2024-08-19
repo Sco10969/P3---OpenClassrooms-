@@ -423,6 +423,12 @@ a {
   color: black;
 }
 
+.restaurants__card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .restaurants__card-text {
   -webkit-box-flex: 1;
       -ms-flex: 1;

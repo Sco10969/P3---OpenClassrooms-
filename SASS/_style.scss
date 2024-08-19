@@ -283,7 +283,7 @@ a {
     &__container {
         display: flex;
         justify-content: center;
-        background-color: $color-background;;
+        background-color: $color-background;
     }
 
     &__title {
@@ -334,6 +334,12 @@ a {
             color: black;
         }
 
+        &-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
         &-text {
             flex: 1;
             display: flex;
@@ -377,11 +383,12 @@ a {
             }
         }
     }
+
     &__favorite-container {
         display: flex;
         align-items: center;
     }
-    
+
     &__favorite {
         position: relative;
         width: 24px;
