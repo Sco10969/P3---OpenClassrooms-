@@ -400,6 +400,11 @@ a {
           transform: scale(1.01);
 }
 
+.restaurants__card-figure {
+  height: 100%;
+  margin: 0;
+}
+
 .restaurants__card-image, .restaurant__img {
   width: 100%;
   -o-object-fit: cover;
@@ -421,6 +426,7 @@ a {
           align-items: center;
   padding: 15px;
   color: black;
+  position: relative;
 }
 
 .restaurants__card-text {
@@ -473,6 +479,15 @@ a {
   line-height: 1.0625rem;
 }
 
+.restaurants__card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
 .restaurants__favorite-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,6 +495,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 
 .restaurants__favorite {

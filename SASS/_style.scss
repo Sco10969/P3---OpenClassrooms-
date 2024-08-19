@@ -283,7 +283,7 @@ a {
     &__container {
         display: flex;
         justify-content: center;
-        background-color: $color-background;;
+        background-color: $color-background;
     }
 
     &__title {
@@ -319,6 +319,11 @@ a {
             transform: scale(1.01);
         }
 
+        &-figure {
+            height: 100%;
+            margin: 0;
+        }
+
         &-image {
             width: 100%;
             object-fit: cover;
@@ -332,6 +337,7 @@ a {
             align-items: center;
             padding: 15px;
             color: black;
+            position: relative;
         }
 
         &-text {
@@ -376,10 +382,21 @@ a {
                 line-height: 1.0625rem;
             }
         }
+
+        &-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
     }
+
     &__favorite-container {
         display: flex;
         align-items: center;
+        z-index: 2;
     }
     
     &__favorite {
