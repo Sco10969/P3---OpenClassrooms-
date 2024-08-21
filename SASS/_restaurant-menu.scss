@@ -159,17 +159,11 @@
             }
         }
 
-        & input[type=checkbox]:checked {
+        input[type=checkbox]:checked {
             & ~ .menu__item-content {
                 width: calc(100% - 59px - 30px);
             }
 
-            // .menu__item-title,
-            // .menu__item-description {
-            //     width: calc(100% - 59px);
-            // }
-
-            // .menu__item-price,
             & ~ .menu__item-check {
                 transform: translateX(-59px);
             }
