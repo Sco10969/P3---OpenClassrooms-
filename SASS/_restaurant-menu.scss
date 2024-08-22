@@ -1,5 +1,16 @@
 // restaurant-menu.scss
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .header {
     position: relative;
 
@@ -70,6 +81,12 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+
+        &:nth-child(1) { animation-delay: 0.1s; }
+        &:nth-child(2) { animation-delay: 0.2s; }
+        &:nth-child(3) { animation-delay: 0.3s; }
 
         &-title {
             font-size: $font-size-16;
@@ -106,6 +123,13 @@
         overflow: hidden;
         background-color: #FFFFFF;
         position: relative;
+        animation: fadeInUp 0.4s ease-out forwards;
+        opacity: 0;
+
+        &:nth-child(1) { animation-delay: 0.4s; }
+        &:nth-child(2) { animation-delay: 0.5s; }
+        &:nth-child(3) { animation-delay: 0.6s; }
+        &:nth-child(4) { animation-delay: 0.7s; }
 
         &-content {
             display: flex;
@@ -191,37 +215,5 @@
             justify-content: center;
             gap: 24px;
         }
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.menu {
-    &__section {
-        animation: fadeInUp 0.6s ease-out forwards;
-        opacity: 0;
-
-        &:nth-child(1) { animation-delay: 0.1s; }
-        &:nth-child(2) { animation-delay: 0.2s; }
-        &:nth-child(3) { animation-delay: 0.3s; }
-    }
-
-    &__item {
-        animation: fadeInUp 0.4s ease-out forwards;
-        opacity: 0;
-
-        &:nth-child(1) { animation-delay: 0.4s; }
-        &:nth-child(2) { animation-delay: 0.5s; }
-        &:nth-child(3) { animation-delay: 0.6s; }
-        &:nth-child(4) { animation-delay: 0.7s; }
     }
 }
