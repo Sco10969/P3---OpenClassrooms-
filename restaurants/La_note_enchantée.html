@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La palette du goût - OhMyFood</title>
-    <meta name="description" content="Découvrez le menu du restaurant La palette du goût sur OhMyFood">
+    <title>La note enchantée - OhMyFood</title>
+    <meta name="description" content="Découvrez le menu du restaurant La note enchantée sur OhMyFood">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 
 <body>
@@ -18,10 +18,10 @@
         <!-- Header -->
         <header class="header">
             <div class="header__content">
-                <a href="index.html" class="header__icon-goback" aria-label="Retour à la page d'accueil">
+                <a href="../index.html" class="header__icon-goback" aria-label="Retour à la page d'accueil">
                     <i class="fas fa-arrow-left"></i>
                 </a>
-                <a href="index.html" class="header__logo header__logo-link no-select">
+                <a href="../index.html" class="header__logo header__logo-link no-select">
                     ohmyfood
                 </a>
             </div>
@@ -29,16 +29,15 @@
 
         <!-- Image du restaurant -->
         <div class="restaurant">
-            <img class="restaurant__img" alt="La palette du goût"
-                src="Images_et_textes_Ohmyfood/images/restaurants/La_palette_du_goût_wide.jpg" >
+            <img class="restaurant__img" src="../Images_et_textes_Ohmyfood/images/restaurants/La_note_enchantée_wide.jpg" alt="La note enchantée">
         </div>
 
         <!-- Menu du restaurant -->
         <main class="menu">
             <div class="menu__header">
-                <h1 class="menu__title">La palette du goût</h1>
+                <h1 class="menu__title">La note enchantée</h1>
                 <label class="restaurants__favorite" aria-label="Ajouter aux favoris">
-                    <input type="checkbox" class="estaurants__favorite-checkbox" hidden >
+                    <input type="checkbox" class="restaurants__favorite-checkbox" hidden>
                     <i class="restaurants__favorite-icon restaurants__favorite-icon--empty far fa-heart"></i>
                     <i class="restaurants__favorite-icon restaurants__favorite-icon--filled fas fa-heart"></i>
                 </label>
@@ -50,10 +49,10 @@
                     <h2 class="menu__section-title">Entrées</h2>
                     <div class="menu__content">
                         <label class="menu__item shadow">
-                            <input type="checkbox" hidden >
+                            <input type="checkbox" hidden>
                             <span class="menu__item-content">
-                                <span class="menu__item-title">Fricassée d'escargots</span>
-                                <span class="menu__item-description">Au piment d'Espelette</span>
+                                <span class="menu__item-title">Ravioles de foie gras</span>
+                                <span class="menu__item-description">Accompagnés de leur crème à la truffe</span>
                             </span>
                             <span class="menu__item-price">25€</span>
                             <span class="menu__item-check">
@@ -61,12 +60,10 @@
                             </span>
                         </label>
                         <label class="menu__item shadow">
-                            <input type="checkbox" hidden >
+                            <input type="checkbox" hidden>
                             <span class="menu__item-content">
-                                <span class="menu__item-title">Foie gras de canard mi-cuit</span>
-                                <span class="menu__item-description">
-                                    Et ses copeaux de truffe noire
-                                </span>
+                                <span class="menu__item-title">Caviar osciètre</span>
+                                <span class="menu__item-description">Sur blini à la farine de blé noir</span>
                             </span>
                             <span class="menu__item-price">35€</span>
                             <span class="menu__item-check">
@@ -74,14 +71,23 @@
                             </span>
                         </label>
                         <label class="menu__item shadow">
-                            <input type="checkbox" hidden >
+                            <input type="checkbox" hidden>
                             <span class="menu__item-content">
-                                <span class="menu__item-title">Œuf au plat</span>
-                                <span class="menu__item-description">
-                                    Assaisonné à la truffe sur lit de caviar
-                                </span>
+                                <span class="menu__item-title">Homard et espuma de potiron</span>
+                                <span class="menu__item-description">Mariné aux zestes d'orange</span>
                             </span>
                             <span class="menu__item-price">20€</span>
+                            <span class="menu__item-check">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
+                        <label class="menu__item shadow">
+                            <input type="checkbox" hidden>
+                            <span class="menu__item-content">
+                                <span class="menu__item-title">Foie gras de canard cuit entier</span>
+                                <span class="menu__item-description">Confiture de figue et pain toasté</span>
+                            </span>
+                            <span class="menu__item-price">35€</span>
                             <span class="menu__item-check">
                                 <i class="fas fa-check-circle"></i>
                             </span>
@@ -93,12 +99,10 @@
                     <h2 class="menu__section-title">Plats</h2>
                     <div class="menu__content">
                         <label class="menu__item shadow">
-                            <input type="checkbox" hidden >
+                            <input type="checkbox" hidden>
                             <span class="menu__item-content">
-                                <span class="menu__item-title">Filet de bœuf aux herbes</span>
-                                <span class="menu__item-description">
-                                    Accompagné de sa ribambelle de légumes
-                                </span>
+                                <span class="menu__item-title">Noix de coquilles Saint-Jacques</span>
+                                <span class="menu__item-description">Sur lit de purée de céleri-rave</span>
                             </span>
                             <span class="menu__item-price">40€</span>
                             <span class="menu__item-check">
@@ -106,12 +110,10 @@
                             </span>
                         </label>
                         <label class="menu__item shadow">
-                            <input type="checkbox" hidden >
+                            <input type="checkbox" hidden>
                             <span class="menu__item-content">
-                                <span class="menu__item-title">Parmentier de queue de bœuf</span>
-                                <span class="menu__item-description">
-                                    À la truffe noire sur sa purée de panais
-                                </span>
+                                <span class="menu__item-title">Langoustine poêlée</span>
+                                <span class="menu__item-description">Purée de patate douce</span>
                             </span>
                             <span class="menu__item-price">35€</span>
                             <span class="menu__item-check">
@@ -119,12 +121,12 @@
                             </span>
                         </label>
                         <label class="menu__item shadow">
-                            <input type="checkbox" hidden >
+                            <input type="checkbox" hidden>
                             <span class="menu__item-content">
-                                <span class="menu__item-title">Filet de turbot</span>
-                                <span class="menu__item-description">Aux agrumes</span>
+                                <span class="menu__item-title">Mijoté de queue de bœuf</span>
+                                <span class="menu__item-description">Et riz sauvage aux zestes de citron</span>
                             </span>
-                            <span class="menu__item-price">44€</span>
+                            <span class="menu__item-price">45€</span>
                             <span class="menu__item-check">
                                 <i class="fas fa-check-circle"></i>
                             </span>
@@ -136,10 +138,10 @@
                     <h2 class="menu__section-title">Desserts</h2>
                     <div class="menu__content">
                         <label class="menu__item shadow">
-                            <input type="checkbox" hidden >
+                            <input type="checkbox" hidden>
                             <span class="menu__item-content">
-                                <span class="menu__item-title">Paris-Brest</span>
-                                <span class="menu__item-description">Revisité</span>
+                                <span class="menu__item-title">Macaron noisette et chocolatt</span>
+                                <span class="menu__item-description">Glace au caramel brun et sel de Guérande</span>
                             </span>
                             <span class="menu__item-price">18€</span>
                             <span class="menu__item-check">
@@ -147,14 +149,10 @@
                             </span>
                         </label>
                         <label class="menu__item shadow">
-                            <input type="checkbox" hidden >
+                            <input type="checkbox" hidden>
                             <span class="menu__item-content">
-                                <span class="menu__item-title">
-                                    Macaron au chocolat d'exception
-                                </span>
-                                <span class="menu__item-description">
-                                    Et glace à la vanille de Madagascar
-                                </span>
+                                <span class="menu__item-title">Baba au rhum revisité</span>
+                                <span class="menu__item-description">Avec son coulis de citron</span>
                             </span>
                             <span class="menu__item-price">22€</span>
                             <span class="menu__item-check">
@@ -162,12 +160,10 @@
                             </span>
                         </label>
                         <label class="menu__item shadow">
-                            <input type="checkbox" hidden >
+                            <input type="checkbox" hidden>
                             <span class="menu__item-content">
-                                <span class="menu__item-title">Mousse au chocolat</span>
-                                <span class="menu__item-description">
-                                    Au piment d'Espelette et à la truffe noire
-                                </span>
+                                <span class="menu__item-title">Tarte au citron meringuée</span>
+                                <span class="menu__item-description">Déstructurée</span>
                             </span>
                             <span class="menu__item-price">23€</span>
                             <span class="menu__item-check">
