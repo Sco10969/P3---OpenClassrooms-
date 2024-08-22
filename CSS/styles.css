@@ -855,13 +855,13 @@ body.has-loader {
 
 @-webkit-keyframes enable-scroll {
   to {
-    overflow: visible;
+    overflow: auto;
   }
 }
 
 @keyframes enable-scroll {
   to {
-    overflow: visible;
+    overflow: auto;
   }
 }
 
