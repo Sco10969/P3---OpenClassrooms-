@@ -791,7 +791,6 @@ body.has-loader {
   background-color: rgba(255, 255, 255, 0.9);
   font: bold 48px "Shrikhand", cursive;
   color: transparent;
-  letter-spacing: 2px;
 }
 
 .loader::before {

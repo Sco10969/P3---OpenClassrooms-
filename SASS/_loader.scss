@@ -16,24 +16,23 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     font: bold 48px $font-shrikhand;
     color: transparent;
-    letter-spacing: 2px;
+    
+    &::before {
+        content: 'ohmyfood';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        background: $gradient-primary;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        overflow: hidden;
+        animation: animloader 2.5s 0.2s ease-in-out forwards;
+        text-align: center;
+    }
 }
-
-.loader::before {
-    content: 'ohmyfood';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    background: $gradient-primary;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    overflow: hidden;
-    animation: animloader 2.5s 0.2s ease-in-out forwards;
-    text-align: center;
-}   
 
 @keyframes loader__anim {
     0%, 80% {
