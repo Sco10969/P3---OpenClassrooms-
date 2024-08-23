@@ -1,0 +1,37 @@
+/* Colors */
+$color-background--primary: #F6F6F6;
+$color-background--secondary: #FFFFFF;
+$color-background: $color-background--primary;
+
+$color-badge: #99E2D0;
+$color-new: #008766;
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+
+$gradient-primary: linear-gradient(to bottom, $color-primary -11.44%, $color-secondary 123.93%);
+$gradient-hover: linear-gradient(to bottom, lighten($color-primary, 5%) -11.44%, lighten($color-secondary, 5%) 123.93%);
+$gradient-heart: linear-gradient(193.33deg, $color-primary -11.44%, $color-secondary 123.93%);
+
+/* Typography */
+$font-shrikhand: 'Shrikhand', cursive;
+$font-weight-700: 700;
+$font-weight-500: 500;
+$font-weight-400: 400;
+$font-weight-300: 300;
+$line-height-28: 1.75rem;
+$line-height-21: 1.315rem;
+$line-height-19: 1.245rem;
+$font-size-32: 2rem;
+$font-size-24: 1.5rem;
+$font-size-18: 1.125rem;
+$font-size-16: 1rem;
+
+// $font-title: $font-size-32;
+
+$color-section--even: $color-background--primary;
+$color-section--odd: $color-background--secondary;
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1440px;
