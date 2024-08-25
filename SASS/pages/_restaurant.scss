@@ -34,7 +34,7 @@
     height: auto;
     overflow: hidden;
 
-    @media (min-width: 768px) {
+    @include breakpoint(tablet) {
         height: 384px;
     }
 
@@ -45,7 +45,7 @@
         object-fit: cover;
         object-position: center;
 
-        @media (min-width: 768px) {
+        @include breakpoint(tablet) {
             height: 100%;
             object-position: 50% 63%;
         }
@@ -203,7 +203,7 @@
     }
 }
 
-@media screen and (min-width: 986px) {
+@include breakpoint(desktop) {
     .menu {
         width: 1055px;
         margin-left: auto;

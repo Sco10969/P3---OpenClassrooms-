@@ -219,48 +219,48 @@ a {
         display: grid;
         gap: 25px;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 
-        &__step {
+    &__step {
+        display: flex;
+        align-items: center;
+        background-color: $color-background;
+        border-radius: 20px;
+        padding: 20px;
+        width: 100%;
+        position: relative;
+        gap: 23px;
+
+        &-number {
+            line-height: $line-height-28;
+            color: #FFFFFF;
+            background-color: $color-primary;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
             display: flex;
+            justify-content: center;
             align-items: center;
-            background-color: $color-background;
-            border-radius: 20px;
-            padding: 20px;
-            width: 100%;
-            position: relative;
-            gap: 23px;
+            flex-shrink: 0;
+            position: absolute;
+            left: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-            &-number {
-                line-height: $line-height-28;
-                color: #FFFFFF;
-                background-color: $color-primary;
-                border-radius: 50%;
-                width: 24px;
-                height: 24px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-shrink: 0;
-                position: absolute;
-                left: -12px;
-                top: 50%;
-                transform: translateY(-50%);
+        &-icon {
+            color: #7E7E7E;
+            margin-left: 18px;
+
+            &--accent {
+                color: $color-primary;
             }
+        }
 
-            &-icon {
-                color: #7E7E7E;
-                margin-left: 18px;
-
-                &--accent {
-                    color: $color-primary;
-                }
-            }
-
-            &-text {
-                font-weight: $font-weight-500;
-                font-size: $font-size-16;
-                line-height: $line-height-19;
-            }
+        &-text {
+            font-weight: $font-weight-500;
+            font-size: $font-size-16;
+            line-height: $line-height-19;
         }
     }
 }
