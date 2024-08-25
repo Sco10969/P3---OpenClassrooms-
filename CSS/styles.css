@@ -1208,11 +1208,15 @@ a {
   font-size: 1.25rem;
 }
 
-.menu__item input[type=checkbox]:checked ~ .menu__item-content {
+.menu__item-checkbox {
+  display: none;
+}
+
+.menu__item-checkbox:checked ~ .menu__item-content {
   width: calc(100% - 59px - 30px);
 }
 
-.menu__item input[type=checkbox]:checked ~ .menu__item-check {
+.menu__item-checkbox:checked ~ .menu__item-check {
   -webkit-transform: translateX(-59px);
           transform: translateX(-59px);
 }

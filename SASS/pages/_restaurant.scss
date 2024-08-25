@@ -184,12 +184,14 @@
             }
         }
 
-        input[type=checkbox]:checked {
-            & ~ .menu__item-content {
+        &-checkbox {
+            display: none;
+
+            &:checked ~ .menu__item-content {
                 width: calc(100% - 59px - 30px);
             }
 
-            & ~ .menu__item-check {
+            &:checked ~ .menu__item-check {
                 transform: translateX(-59px);
             }
         }
