@@ -12,10 +12,10 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    animation: loader__anim 3s 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
     background-color: rgba(255, 255, 255, 0.9);
     font: bold 48px $font-shrikhand;
     color: transparent;
+    animation: loader__anim 3s 0.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
     
     &::before {
         content: 'ohmyfood';
@@ -29,8 +29,8 @@ body {
         -webkit-background-clip: text;
         color: transparent;
         overflow: hidden;
-        animation: animloader 2.5s 0.2s ease-in-out forwards;
         text-align: center;
+        animation: animloader 2.5s 0.2s ease-in-out forwards;
     }
 }
 
